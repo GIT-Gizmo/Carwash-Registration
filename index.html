@@ -11,6 +11,7 @@
     <!--===============================================================================================-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.cdnfonts.com/css/gt-walsheim" rel="stylesheet">
     <!--===============================================================================================-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!--===============================================================================================-->
@@ -30,16 +31,16 @@
         </h1>
 
         <form id="contactform" class="validate-form was-validated">
-            <div id="number" class="wrap-input">
+            <div id="number" class="wrap-input" >
                 <label for="phone" class="form-label">Phone number</label>
-                <input id="phoneNumber" class="input-box" type="tel" placeholder="Type in your phone number">
+                <input id="phoneNumber" class="input-box" type="tel" placeholder="+2348080848665" required>
                 <div class="valid-feedback">✅</div>
                 <div class="invalid-feedback">Please fill out this field.</div>
 
                 <div id="recaptcha-container"></div>
 
                 <div class="wrap-login-form-btn">
-                    <button type="button" id="btn" class="clicky" onClick="phoneAuth()">
+                    <button type="submit" onclick="phoneAuth()" id="btn" class="clicky" >
                         <p>Get OTP</p>
                     </button>
                 </div>
@@ -59,7 +60,7 @@
                 <!-- <button type="submit" id="verify" class="clicky verified" onClick="codeverify()">
                     Verify
                 </button> -->
-                <a href="register.html" type="button" id="verify" class="clicky verified" onClick="codeverify()">
+                <a href="register.html" type="button" id="verify" class="clicky verified" onclick="codeverify()">
                     Verify</a>
             </div>
 
