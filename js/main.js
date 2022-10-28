@@ -25,15 +25,11 @@ render();
 // Validate inputs
 let input = document.querySelector(".input-box");
 let button = document.querySelector(".clicky");
-button.disabled = true;
-input.addEventListener("change", stateHandle);
 
-function stateHandle() {
-  if (document.querySelector(".input-box").value === "") {
-    button.disabled = true;
-  } else {
-    button.disabled = false;
-  }
+if (document.querySelector(".input-box").value === "") {
+  button.disabled = true;
+} else {
+  button.disabled = false;
 }
 
 
@@ -51,7 +47,8 @@ function render() {
 // const auth = getAuth();
 // window.recaptchaVerifier = new RecaptchaVerifier('recaptcha-container', {}, auth);
 //	function for send message
-function phoneAuth() {
+function phoneAuth(e) {
+  e.preventDefault();
   var number = document.getElementById('phoneNumber').value;
   firebase.auth().signInWithPhoneNumber(number, window.recaptchaVerifier).then(function (confirmationResult) {
     window.confirmationResult = confirmationResult;
